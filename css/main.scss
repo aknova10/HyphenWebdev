@@ -1,21 +1,123 @@
-$color-blue : #00ff0d;
+$start-color : #31CDB0;
+$mid-color : #2C8EC4;
+$end-color : #3551A4;
 body {
+    margin: 0;
     font-family: 'Roboto', sans-serif;
-    
+    overflow: hidden scroll;   
+}
+textarea {
+    font-family: 'Roboto', sans-serif;   
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    background-image: linear-gradient(to right, $start-color, $mid-color, $end-color);
+    padding-bottom: 10px;
+    z-index: 999;
+    img {
+        position: relative;
+        left: 3%;
+        padding-top: 5px;
+    }
+    nav {
+        position: relative;
+        left: 80%;
+        padding-top: 10px;
+        ul {
+            display: flex;
+            list-style-type: none;
+            li {
+                padding-right: 20px;
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+.filler {
+    padding-top: 10%;
 }
 
-ul {
-    list-style-type: none;
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    div {
+        margin: 0% 5%;
+        text-align: center;
+    }
+    .image-cam {
+        border: 0;
+        border-radius: 15px;
+        width: 300px;
+        transition: 0.4s;
+    }
+    .image-cam:hover {
+        transform: translateY(-5px);
+        -webkit-box-shadow: 10px 10px 10px -3px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 10px -3px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 10px -3px rgba(0,0,0,0.75);
+        transition: 0.4s;
+    }
+}
+h1 {
+    padding-left: 10px;
+}
+#color-control {
+    color: #000000;
 }
 
-.size-control {
-    font-size: 20px;
-    font-weight: lighter;
-}
-.image {
-    width: 300px;
+.about-try {
+    margin-left: 3%;
+    .size-control {
+        font-size: 20px;
+        font-weight: lighter;
+    }
 }
 
-#contact-info {
+.contact-info {
+    display: flex;
+    margin-left: 3%;
+    .form-group {
+        margin-right: 20%;
+        .form-input {
+            font-size: 25px;
+            border: 0.5px solid black;
+            border-radius: 5px;
+        }
+    }
+}
 
+.btn {
+    padding: 10px 25px;
+    border: 0;
+    border-radius: 50px;
+    color: white;
+    background-image: linear-gradient(to right, $start-color, $mid-color, $end-color);
+    font-size: 25px;
+    cursor: pointer;
+    outline: none;
+
+}
+.map-window {
+    border-radius: 15px;
+    width: 700px;
+    height: 500px;
+}
+
+.foot {
+    text-align: center;
+    color: white;
+    background-color: $end-color;
+    padding-bottom: 0.1%;
+    h3 {
+        padding-top: 1%;
+        font-weight: lighter;
+    }
 }
